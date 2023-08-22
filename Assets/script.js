@@ -48,7 +48,7 @@ $(document).ready(function () {
 
   //get uv index
   function getUVIndex(lat, lon) {
-    const url = `http://api.openweathermap.org/data/2.5/uvi?&lat=${lat}&lon=${lon}&appid=${apiKey}`;
+    const url = `https://api.openweathermap.org/data/2.5/uvi?&lat=${lat}&lon=${lon}&appid=${apiKey}`;
 
     fetch(url)
       .then((response) => response.json())
@@ -90,7 +90,7 @@ $(document).ready(function () {
     var cityName = data.city.name;
     var countryName = data.city.country;
     var todayDate = data.list[0].dt_txt.split(" ")[0].toLocaleString();
-    var icon = `<img src="http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png">`;
+    var icon = `<img src="https://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png">`;
     var temperature = data.list[0].main.temp;
     var humidity = data.list[0].main.humidity;
     var windSpeed = data.list[0].wind.speed;
@@ -147,7 +147,7 @@ $(document).ready(function () {
       dataCol.addClass(
         "col-md-2 five-days mx-2 rounded text-dark p-3 text-center border"
       );
-      var icon = `<img src="http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png">`;
+      var icon = `<img src="https://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png">`;
       if (data.list[i].dt_txt.includes("12:00:00")) {
         var date = data.list[i].dt_txt;
         dataCol.html(`
