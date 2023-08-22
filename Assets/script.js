@@ -148,7 +148,7 @@ $(document).ready(function () {
         "col-md-2 five-days mx-2 rounded text-dark p-3 text-center border"
       );
       var icon = `<img src="http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png">`;
-      if (data.list[i].dt_txt.includes("18:00:00")) {
+      if (data.list[i].dt_txt.includes("12:00:00")) {
         var date = data.list[i].dt_txt;
         dataCol.html(`
 				
